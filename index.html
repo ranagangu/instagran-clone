@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instagram Clone</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <script>
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <button onclick="logout()" style="position: fixed; top: 10px; right: 10px;">Logout</button>
+  <script>
+    function logout() {
+      localStorage.removeItem("loggedIn");
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <div class="container">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">Instagram</div>
+      <nav>
+        <ul>
+          <li>🏠 Home</li>
+          <li>🔍 Search</li>
+          <li>🧭 Explore</li>
+          <li>🎞 Reels</li>
+          <li>✉️ Messages</li>
+          <li>🔔 Notifications</li>
+          <li>➕ Create</li>
+          <li>👤 Profile</li>
+          <li>⚙️ More</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Feed -->
+    <main class="feed">
+      <!-- Stories -->
+      <section class="stories">
+        <div class="story"><img src="https://randomuser.me/api/portraits/men/1.jpg"><p>Ayush</p></div>
+        <div class="story"><img src="https://randomuser.me/api/portraits/women/2.jpg"><p>Alia</p></div>
+        <div class="story"><img src="https://randomuser.me/api/portraits/men/4.jpg"><p>John</p></div>
+        <div class="story"><img src="https://randomuser.me/api/portraits/women/6.jpg"><p>Emily</p></div>
+        <div class="story"><img src="https://randomuser.me/api/portraits/men/7.jpg"><p>Raj</p></div>
+        <div class="story"><img src="https://randomuser.me/api/portraits/women/9.jpg"><p>Olivia</p></div>
+      </section>
+
+      <!-- Posts -->
+      <section class="posts">
+        <!-- Post 1 -->
+        <div class="post">
+          <div class="post-header">
+            <img src="https://randomuser.me/api/portraits/men/3.jpg" />
+            <span>senna_legend</span>
+            <span class="dots">•••</span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="post-img" />
+          <div class="post-actions">❤️ 💬 📤 🔖</div>
+          <div class="post-caption"><strong>senna_legend</strong> Focus. Speed. Precision.</div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="post">
+          <div class="post-header">
+            <img src="https://randomuser.me/api/portraits/women/12.jpg" />
+            <span>emily_art</span>
+            <span class="dots">•••</span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1600172454520-1673307fd5d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="post-img" />
+          <div class="post-actions">❤️ 💬 📤 🔖</div>
+          <div class="post-caption"><strong>emily_art</strong> Finished this piece today 🎨</div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="post">
+          <div class="post-header">
+            <img src="https://randomuser.me/api/portraits/men/6.jpg" />
+            <span>tech_guru</span>
+            <span class="dots">•••</span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1611224923853-ec7c3946ae8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="post-img" />
+          <div class="post-actions">❤️ 💬 📤 🔖</div>
+          <div class="post-caption"><strong>tech_guru</strong> Just unboxed the latest gear 😍</div>
+        </div>
+
+        <!-- Post 4 -->
+        <div class="post">
+          <div class="post-header">
+            <img src="https://randomuser.me/api/portraits/women/7.jpg" />
+            <span>travel_gal</span>
+            <span class="dots">•••</span>
+          </div>
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="post-img" />
+          <div class="post-actions">❤️ 💬 📤 🔖</div>
+          <div class="post-caption"><strong>travel_gal</strong> Paradise found 🌴</div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Right Sidebar -->
+    <aside class="rightbar">
+      <div class="profile-info">
+        <img src="https://randomuser.me/api/portraits/men/10.jpg" />
+        <div>
+          <strong>ayush_dev</strong>
+          <p>Ayush</p>
+        </div>
+      </div>
+      <div class="suggestions">
+        <p>Suggestions for you</p>
+
+        <div class="suggestion">
+          <img src="https://randomuser.me/api/portraits/women/20.jpg" />
+          <div><strong>jane_doe</strong><p>Suggested for you</p></div>
+          <button>Follow</button>
+        </div>
+
+        <div class="suggestion">
+          <img src="https://randomuser.me/api/portraits/men/21.jpg" />
+          <div><strong>code_master</strong><p>New to Instagram</p></div>
+          <button>Follow</button>
+        </div>
+
+        <div class="suggestion">
+          <img src="https://randomuser.me/api/portraits/women/22.jpg" />
+          <div><strong>nora_chef</strong><p>Suggested for you</p></div>
+          <button>Follow</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+</body>
+</html>
